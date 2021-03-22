@@ -1,0 +1,35 @@
+html {
+    font-size: 16px;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    // font-family: "Work Sans", sans-serif;
+}
+
+// button {
+//     display: inline-block;
+//     border: none;
+   
+//     text-align: center;
+//     text-decoration: none;
+
+//     cursor: pointer;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+// }
+
+button:focus {
+    outline: 1px solid #0069ed;
+}
