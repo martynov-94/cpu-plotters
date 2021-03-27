@@ -1,35 +1,56 @@
 html {
-    font-size: 16px;
+  font-size: 16px;
 
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
 
 *, 
 *::before, 
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    // font-family: "Work Sans", sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  
+  background: url("../img/bg-pattern.png") repeat;
 }
 
-// button {
-//     display: inline-block;
-//     border: none;
+button {
+    display: inline-block;
+    border: none;
    
-//     text-align: center;
-//     text-decoration: none;
+    text-align: center;
+    text-decoration: none;
 
-//     cursor: pointer;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-// }
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
 button:focus {
-    outline: 1px solid #0069ed;
+  outline: 1px solid #0069ed;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  min-height: 101vh;
+  margin: 0 auto;
+  padding: 20px 5vw 0;
+
+  background-color: #d4cac5;
+
+  @media screen and (min-width: 48em) {
+    width: 75vw;
+  }
+}
+
+.placeholder {
+  height: 50vh;
 }
