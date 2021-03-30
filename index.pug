@@ -1,3 +1,49 @@
 include build/project.pug
 
+-
+  const IMG_PATH = "img/plotters/";
+  let plotters = [
+    {
+      name: "Режущие плоттеры Jinka",
+      img: IMG_PATH + "jinka.jpg",
+      link: "#"
+    },
+    {
+      name: "Режущие плоттеры Jinka с контурной резкой (программа ArtCut)",
+      img: IMG_PATH + "jinka_artcut.jpg",
+      link: "#"
+    },
+    {
+      name: "Режущие плоттеры Rabbit N",
+      img: IMG_PATH + "rabbit_n.jpg",
+      link: "#"
+    },
+    {
+      name: "Режущие плоттеры с контурной резкой Rabbit K",
+      img: IMG_PATH + "rabbit_k.jpg",
+      link: "#"
+    },
+    {
+      name: "Режущие плоттеры с контурной резкой K3",
+      img: IMG_PATH + "k3.jpg",
+      link: "#"
+    },
+    {
+      name: "Фрезерные станки",
+      img: IMG_PATH + "frayser.jpg",
+      link: "#"
+    },
+    {
+      name: "Комплектующие и оборудование",
+      img: IMG_PATH + "accessories.jpg",
+      link: "#"
+    },
+  ];
+
 +page("Плоттеры, станки, комплектующие в России")
+  ul.plotters__list
+    each plotter in plotters
+        li
+          a.plotters__item(href=plotter.link)
+            img.plotters__item-img(src=plotter.img width=180 height=165 alt=plotter.name)
+            h2.plotters__item-title= plotter.name

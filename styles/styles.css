@@ -46,10 +46,35 @@ button:focus {
   }
 }
 
-.placeholder {
-  height: 50vh;
+.plotters {
+  padding-top: 20px;
 }
-
+.plotters__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #544943;
+  font-size: 2rem;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+}
+.plotters__item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: -4px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  border-top: 1px dashed rgba(0, 0, 0, 0.35);
+}
+.plotters__item-img {
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
 .page-header {
   display: flex;
   flex-direction: column;
