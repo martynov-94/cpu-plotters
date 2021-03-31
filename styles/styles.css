@@ -46,35 +46,10 @@ button:focus {
   }
 }
 
-.plotters {
-  padding-top: 20px;
+.content {
+  margin-top: 20px;
 }
-.plotters__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #544943;
-  font-size: 2rem;
-  font-family: "Times New Roman", serif;
-  font-weight: bold;
-}
-.plotters__item::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  bottom: -4px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-  border-top: 1px dashed rgba(0, 0, 0, 0.35);
-}
-.plotters__item-img {
-  margin-right: 20px;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid rgba(128, 106, 106, 0.35);
-}
+
 .page-header {
   display: flex;
   flex-direction: column;
@@ -212,5 +187,65 @@ button:focus {
 @media screen and (min-width: 52em) {
   .page-footer__homepage-link {
     margin-left: 15px;
+  }
+}
+
+.goods-list__item {
+  position: relative;
+  display: block;
+  align-items: center;
+  margin-bottom: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #544943;
+  font-size: 1.2rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  line-height: 1.3;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+@media screen and (min-width: 52em) {
+  .goods-list__item {
+    display: flex;
+    margin-bottom: 6px;
+    border: none;
+  }
+}
+@media screen and (min-width: 52em) {
+  .goods-list__item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: -4px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    border-top: 1px dashed rgba(0, 0, 0, 0.35);
+  }
+}
+.goods-list__item-img {
+  width: 100%;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid rgba(128, 106, 106, 0.35);
+}
+@media screen and (min-width: 52em) {
+  .goods-list__item-img {
+    min-width: 180px;
+    width: 180px;
+  }
+}
+.goods-list__item-title {
+  padding: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 52em) {
+  .goods-list__item-title {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  .goods-list__item-title {
+    font-size: 2rem;
   }
 }

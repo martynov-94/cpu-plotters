@@ -36,14 +36,16 @@ include build/project.pug
     {
       name: "Комплектующие и оборудование",
       img: IMG_PATH + "accessories.jpg",
-      link: "#"
+      link: "#",
     },
   ];
 
+  let classNames = {
+    item: "plotters__item",
+    img: "plotters__item-img",
+    h2: "plotters__item-title"
+  };
+
 +page("Плоттеры, станки, комплектующие в России")
-  ul.plotters__list
-    each plotter in plotters
-        li
-          a.plotters__item(href=plotter.link)
-            img.plotters__item-img(src=plotter.img width=180 height=165 alt=plotter.name)
-            h2.plotters__item-title= plotter.name
+  ul.goods-list.plotters
+    +goods-list(plotters)
