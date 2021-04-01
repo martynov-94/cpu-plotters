@@ -57,6 +57,17 @@ button:focus {
 }
 
 .content-text {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -15px;
+    content: "";
+    width: 100%;
+
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    border-top: 1px dashed rgba(0, 0, 0, 0.35);
+  }
 
   p {
     text-indent: 1.5em;
@@ -65,7 +76,19 @@ button:focus {
 
   img {
     display: block;
+    max-width: 100%;
     margin: 0 auto;
     margin-top: 15px;
+
+    object-fit: cover;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
   }
 }

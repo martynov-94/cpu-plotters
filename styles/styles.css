@@ -51,14 +51,34 @@ button:focus {
   margin-bottom: 20px;
 }
 
+.content-text {
+  position: relative;
+}
+.content-text::before {
+  position: absolute;
+  top: -15px;
+  content: "";
+  width: 100%;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  border-top: 1px dashed rgba(0, 0, 0, 0.35);
+}
 .content-text p {
   text-indent: 1.5em;
   margin-bottom: 5px;
 }
 .content-text img {
   display: block;
+  max-width: 100%;
   margin: 0 auto;
   margin-top: 15px;
+  object-fit: cover;
+}
+.content-text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .page-header {
@@ -268,14 +288,6 @@ button:focus {
   gap: 20px 5px;
   margin-bottom: 30px;
 }
-.goods-list::after {
-  position: absolute;
-  bottom: -18px;
-  content: "";
-  width: 100%;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-  border-top: 1px dashed rgba(0, 0, 0, 0.35);
-}
 @media screen and (min-width: 52em) {
   .goods-list {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -306,13 +318,17 @@ button:focus {
   font-size: 1.6rem;
   font-family: "Roboto Slab", serif;
   font-weight: bold;
+  text-align: center;
 }
 .goods-list__item-price {
   color: black;
   font-size: 1.3rem;
+  line-height: 1.1;
   font-family: "Roboto Slab", serif;
   font-weight: bold;
+  text-align: center;
 }
 .goods-list__item-status {
+  margin-left: -5px;
   color: #544943;
 }

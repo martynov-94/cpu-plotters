@@ -5,15 +5,15 @@
   gap: 20px 5px;
   margin-bottom: 30px;
 
-  &::after {
-    position: absolute;
-    bottom: -18px;
-    content: "";
-    width: 100%;
+  // &::after {
+  //   position: absolute;
+  //   bottom: -18px;
+  //   content: "";
+  //   width: 100%;
 
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-    border-top: 1px dashed rgba(0, 0, 0, 0.35);
-  }
+  //   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  //   border-top: 1px dashed rgba(0, 0, 0, 0.35);
+  // }
 
   @media screen and (min-width: $breakpoint-medium) {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -54,16 +54,20 @@
     font-size: 1.6rem;
     font-family: "Roboto Slab", serif;
     font-weight: bold;
+    text-align: center;
   }
 
   &__item-price {
     color: black;
     font-size: 1.3rem;
+    line-height: 1.1;
     font-family: "Roboto Slab", serif;
     font-weight: bold;
+    text-align: center;
   }
 
   &__item-status {
+    margin-left: -5px;
     color: #544943;
   }
 }
