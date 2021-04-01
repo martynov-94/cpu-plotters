@@ -10,7 +10,7 @@
     },
     {
       text: "Драйвера",
-      link: "#"
+      link: "drivers.html"
     },
     {
       text: "Контакты",
@@ -18,18 +18,23 @@
     },
     {
       text: "Видео/Фото",
-      link: "#"
+      link: "video_photo.html"
     },
     {
       text: "Инструкции",
-      link: "#"
+      link: "instructions.html"
     }
   ];
 
 
-mixin main-menu()
+mixin main-menu(activeTab)
   nav.main-menu
     ul.main-menu__list
-      each item in menuItems
-        li.main-menu__item
+      each item, index in menuItems
+        - 
+          let className = "main-menu__item";
+          if (activeTab == index) {
+            className += " main-menu__item_active";
+          }
+        li(class= className)
           a(href=item.link)= item.text
