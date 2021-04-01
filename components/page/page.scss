@@ -92,3 +92,53 @@ button:focus {
     text-align: center;
   }
 }
+
+.videos-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 50px;
+  }
+
+  &__item {
+    // border: 1px solid black;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__item-link {
+    max-width: 100%;
+    width: 100%;
+    // height: auto;
+    
+    iframe {
+      width: 100%;
+      // height: auto;
+    }
+
+    
+  }
+}
