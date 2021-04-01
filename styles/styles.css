@@ -385,7 +385,6 @@ button:focus {
   color: #d4cac5;
   background-image: linear-gradient(to bottom, #c8c0bc, #7f6e64 50%);
   border-top: 1px solid #b3aaa6;
-  transition: all 0.5s ease-out;
 }
 .files-list__item-file:hover {
   background-image: linear-gradient(to bottom, #c8c0bc, #928379 50%);
@@ -399,4 +398,67 @@ button:focus {
     border-radius: 5px;
     box-shadow: 0 0 5px -1px black;
   }
+}
+
+.contacts {
+  font-size: 1.6rem;
+  color: #544943;
+}
+@media screen and (min-width: 85.375em) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 5vw;
+    align-items: start;
+  }
+}
+.contacts__person-info {
+  padding: 15px;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+.contacts__person-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222222;
+}
+.contacts__person-phone {
+  margin-bottom: 8px;
+}
+.contacts__person-phone-number {
+  color: #222222;
+}
+.contacts__person-skype {
+  margin-bottom: 8px;
+}
+.contacts__person-skype-login {
+  color: #222222;
+}
+.contacts__person-email-login {
+  color: #222222;
+}
+
+.shipping-companies {
+  flex-basis: 2;
+  padding: 15px;
+  border: 1px solid rgba(128, 106, 106, 0.35);
+}
+.shipping-companies__text {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.shipping-companies__list {
+  padding-left: 10vw;
+  list-style-type: square;
+  color: #222222;
+}
+@media screen and (min-width: 52em) {
+  .shipping-companies__list {
+    padding-left: 60px;
+  }
+}
+.shipping-companies__item {
+  margin-bottom: 8px;
+  font-size: 1.6rem;
 }
