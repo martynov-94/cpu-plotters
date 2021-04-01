@@ -1,6 +1,7 @@
 include build/project.pug
 
 - 
+  const IMG_PATH = "files/photos/";
   let videos = [
     {
       name: "Режущий плоттер Rabbit серии N",
@@ -64,6 +65,21 @@ include build/project.pug
     },
   ];
 
+  let photos = [
+    {
+      src: IMG_PATH + "krasnodar_1.webp",
+      alt: "Гравировка акрила 1"
+    },
+    {
+      src: IMG_PATH + "krasnodar_2.webp",
+      alt: "Гравировка акрила 2"
+    },
+    {
+      src: IMG_PATH + "krasnodar_3.webp",
+      alt: "Гравировка акрила 3"
+    },
+  ];
+
 +page("Видео и фотографии", 3)
   .videos-and-photos
     section.videos
@@ -73,3 +89,8 @@ include build/project.pug
             p.videos-list__item-title !{video.name}
             .videos-list__item-link !{video.link}
     section.photos
+      h2.photos__title= "Гравировка акрила на режущем плоттере 1360N для заливки в г.Краснодаре"
+      ul.photos-list
+        each photo in photos
+          li.photos-list__item
+            img.photos-list__item-pic(src=photo.src width="285" height="210" alt=photo.alt)
