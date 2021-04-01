@@ -53,4 +53,19 @@ button:focus {
 
 .content {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content-text {
+
+  p {
+    text-indent: 1.5em;
+    margin-bottom: 5px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 }
